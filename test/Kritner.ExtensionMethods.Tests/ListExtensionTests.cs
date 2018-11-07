@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Xunit;
 
 namespace Kritner.ExtensionMethods.Tests
@@ -28,6 +29,15 @@ namespace Kritner.ExtensionMethods.Tests
             list.AddIfNotNull(nullItem);
 
             Assert.True(list.Count == 0);
+        }
+
+        [Fact]
+        public void ShouldThrowIfListIsNull()
+        {
+            List<TestClass> list = null;
+            var item = new TestClass();
+            
+            Assert.Throws<ArgumentNullException>(() => list.AddIfNotNull(item));
         }
         #endregion AddIfNotNull
     }
