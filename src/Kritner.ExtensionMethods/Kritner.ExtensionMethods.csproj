@@ -1,12 +1,18 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Description>Some extension methods I find useful</Description>
     <PackageTags>extension methods</PackageTags>
-    <Version>1.0.1</Version>
+    <Version>1.0.1.1</Version>
     <RepositoryUrl>https://github.com/Kritner-Blogs/ExtensionMethods</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>Adds xml documentation</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard2.0\Kritner.ExtensionMethods.xml</DocumentationFile>
   </PropertyGroup>
 
 </Project>

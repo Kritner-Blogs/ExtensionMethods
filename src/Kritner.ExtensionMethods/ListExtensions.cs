@@ -15,7 +15,7 @@ namespace Kritner.ExtensionMethods
         /// <typeparam name="T">The type contained within the <see cref="IList{T}"/>.</typeparam>
         /// <param name="obj">The <see cref="IList{T}"/>.</param>
         /// <param name="item">The item to potentially add.</param>
-        /// <exception cref="ArgumentNullException">Thrown if <see cref="obj"/> is null</exception>
+        /// <exception cref="ArgumentNullException">Thrown if obj is null</exception>
         public static void AddIfNotNull<T>(this IList<T> obj, T item)
         {
             if (obj == null)
@@ -36,8 +36,8 @@ namespace Kritner.ExtensionMethods
         /// </summary>
         /// <typeparam name="T">The type contained within the <see cref="IList{T}"/>.</typeparam>
         /// <param name="obj">The <see cref="IList{T}"/>.</param>
-        /// <param name="item">The items to potentially add.</param>
-        /// <exception cref="ArgumentNullException">Thrown if <see cref="obj"/> is null</exception>
+        /// <param name="items">The items to potentially add.</param>
+        /// <exception cref="ArgumentNullException">Thrown if obj is null</exception>
         public static void AddRangeIfNotNull<T>(this IList<T> obj, IEnumerable<T> items)
         {
             if (obj == null)
