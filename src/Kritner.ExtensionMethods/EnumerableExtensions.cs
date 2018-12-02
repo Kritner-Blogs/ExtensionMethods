@@ -10,21 +10,20 @@ namespace Kritner.ExtensionMethods
     public static class EnumerableExtensions
     {
         /// <summary>
-        /// Attempts to find the first item in <see cref="items"/> 
+        /// Attempts to find the first item in items.
         /// meeting <see cref="Predicate{T}"/>. 
         /// 
-        /// Returns the <see cref="true"/> when item found, 
-        /// <see cref="false"/> when not.
+        /// Returns the true when item found, false when not.
         /// 
-        /// Found result is contained within out parameter <see cref="result"/>.
+        /// Found result is contained within out parameter result.
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="items"></param>
-        /// <param name="predicate"></param>
-        /// <param name="result"></param>
-        /// <returns><see cref="true"/> when item found. <see cref="false"/> otherwise.</returns>
+        /// <typeparam name="T">The generic enumerable type.</typeparam>
+        /// <param name="items">The items to enumerate.</param>
+        /// <param name="predicate">The predicate to search for within items.</param>
+        /// <param name="result">The result (when found).</param>
+        /// <returns>true when item found, false otherwise.</returns>
         /// <exception cref="ArgumentNullException">
-        /// Thrown when <see cref="items"/> or <see cref="Predicate{T}"/> is null.
+        /// Thrown when items or predicate is null.
         /// </exception>
         public static bool TryFirst<T>(
             this IEnumerable<T> items, 
